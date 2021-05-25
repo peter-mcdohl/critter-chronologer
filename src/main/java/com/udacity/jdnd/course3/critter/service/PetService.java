@@ -67,4 +67,9 @@ public class PetService {
 
         return petListIntoDTO(petList);
     }
+
+    public List<PetDTO> findAllPets() {
+        List<Pet> petList = petRepository.findAll();
+        return petListIntoDTO(petList);
+    }
 }
