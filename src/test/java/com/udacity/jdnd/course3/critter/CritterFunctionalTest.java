@@ -103,6 +103,10 @@ public class CritterFunctionalTest {
         Assertions.assertEquals(pets.size(), 2);
         Assertions.assertEquals(pets.get(0).getOwnerId(), newCustomer.getId());
         Assertions.assertEquals(pets.get(0).getId(), newPet.getId());
+        Assertions.assertEquals(pets.get(0).getType(), newPet.getType());
+
+        Assertions.assertEquals(pets.get(1).getId(), newPet2.getId());
+        Assertions.assertEquals(pets.get(1).getType(), newPet2.getType());
     }
 
     @Test
