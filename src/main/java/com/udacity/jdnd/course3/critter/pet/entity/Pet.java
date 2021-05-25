@@ -41,6 +41,14 @@ public class Pet {
         this.type = type;
     }
 
+    public Customer getOwner() {
+        return owner;
+    }
+
+    public void setOwner(Customer owner) {
+        this.owner = owner;
+    }
+
     public String getName() {
         return name;
     }
