@@ -57,4 +57,9 @@ public class CustomerService {
         List<Customer> customerList = customerRepository.findAll();
         return customerListIntoDTO(customerList);
     }
+
+    public CustomerDTO findCustomersByPet(Long petId) {
+        Customer customer = customerRepository.findOwnerByPet(petId);
+        return customerIntoDTO(customer);
+    }
 }
