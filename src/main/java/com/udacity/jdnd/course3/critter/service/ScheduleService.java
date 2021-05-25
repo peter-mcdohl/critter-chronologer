@@ -90,4 +90,19 @@ public class ScheduleService {
         List<Schedule> scheduleList = scheduleRepository.findAll();
         return scheduleListIntoDTO(scheduleList);
     }
+
+    public List<ScheduleDTO> findAllScheduleByPet(Long petId) {
+        List<Schedule> scheduleList = scheduleRepository.findByPet(petId);
+        return scheduleListIntoDTO(scheduleList);
+    }
+
+    public List<ScheduleDTO> findAllScheduleByEmployee(Long employeeId) {
+        List<Schedule> scheduleList = scheduleRepository.findByEmployee(employeeId);
+        return scheduleListIntoDTO(scheduleList);
+    }
+
+    public List<ScheduleDTO> findAllScheduleByOwner(Long customerId) {
+        List<Schedule> scheduleList = scheduleRepository.findByCustomer(customerId);
+        return scheduleListIntoDTO(scheduleList);
+    }
 }
